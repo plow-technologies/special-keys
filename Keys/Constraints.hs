@@ -28,12 +28,12 @@ import Data.Aeson
 import qualified Data.Aeson as Aeson
 
 -- | Text with a maximum of 128 characters
-newtype Text128 = Text128 T.Text deriving(Eq, Data, Ord, Read, Show, Typeable, IsString, Monoid, NFData)
-newtype Text256 = Text256 T.Text deriving(Eq, Data, Ord, Read, Show, Typeable, IsString, Monoid, NFData)
-newtype Text512 = Text512 T.Text deriving(Eq, Data, Ord, Read, Show, Typeable, IsString, Monoid, NFData)
-newtype Text1024 = Text1024 T.Text deriving(Eq, Data, Ord, Read, Show, Typeable, IsString, Monoid, NFData)
-newtype Text2048 = Text2048 T.Text deriving(Eq, Data, Ord, Read, Show, Typeable, IsString, Monoid, NFData)
-newtype Text4096 = Text4096 T.Text deriving(Eq, Data, Ord, Read, Show, Typeable, IsString, Monoid, NFData)
+newtype Text128 = Text128 T.Text deriving(Eq, Data, Ord, Read, Show, Typeable, IsString, Semigroup, Monoid, NFData)
+newtype Text256 = Text256 T.Text deriving(Eq, Data, Ord, Read, Show, Typeable, IsString, Semigroup, Monoid, NFData)
+newtype Text512 = Text512 T.Text deriving(Eq, Data, Ord, Read, Show, Typeable, IsString, Semigroup, Monoid, NFData)
+newtype Text1024 = Text1024 T.Text deriving(Eq, Data, Ord, Read, Show, Typeable, IsString, Semigroup, Monoid, NFData)
+newtype Text2048 = Text2048 T.Text deriving(Eq, Data, Ord, Read, Show, Typeable, IsString, Semigroup, Monoid, NFData)
+newtype Text4096 = Text4096 T.Text deriving(Eq, Data, Ord, Read, Show, Typeable, IsString, Semigroup, Monoid, NFData)
 
 class TextConstraint a where
     txtConstraint :: T.Text -> a
